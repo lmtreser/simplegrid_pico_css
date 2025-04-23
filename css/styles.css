@@ -1,0 +1,17 @@
+.col {
+    background-color: #fbced1;
+    border: 1px dashed #dd3b8c;
+    padding: .5rem;
+    text-align: center;
+}
+
+.fil {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: .2rem;
+}
+
+/* Incluye el margen/padding en el ancho total */
+.row [class^="col"] {
+    box-sizing: border-box;
+}  

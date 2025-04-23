@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo SimpleGrid + PicoCSS</title>
+    <link rel="stylesheet" href="css/simple-grid.min.css" />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>Panel con SimpleGrid + PicoCSS</h1>
+        </div>
+        <div class="col-6">
+          <nav>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Iluminación</a></li>
+              <li><a href="#">Climatización</a></li>
+              <li><a href="#">Seguridad</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Section 1 -->
+      <section class="row">
+        <article class="col-12">
+          <h2>Distribución con SimpleGrid</h2>
+          <p>
+            Utilizando SimpleGrid para posicionar los elementos. En este caso,
+            se trata de una
+            <b>col-12</b>.
+          </p>
+        </article>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="row">
+        <!-- Card 1 -->
+        <article class="col-6">
+          <header>
+            <h3>SimpleGrid "col-6"</h3>
+          </header>
+          <p>Utiliza: &lt;article&gt;&lt;header&gt;&lt;p&gt;&lt;footer&gt;</p>
+          <p>Estado: <span id="estado1">Apagado</span></p>
+          <footer>
+            <button onclick="toggleEstado('estado1')">Encender/Apagar</button>
+          </footer>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="col-6">
+          <header>
+            <h3>SimpleGrid "col-6"</h3>
+          </header>
+          <p>Utiliza: &lt;article&gt;&lt;header&gt;&lt;p&gt;&lt;footer&gt;</p>
+          <p>Estado: <span id="estado2">Apagado</span></p>
+          <footer>
+            <button onclick="toggleEstado('estado2')">Encender/Apagar</button>
+          </footer>
+        </article>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="row">
+        <!-- Card 3 -->
+        <article class="col-4">
+          <h3>SimpleGrid "col-4"</h3>
+          <p>Estado: <span id="estado3">Apagado</span></p>
+          <button onclick="toggleEstado('estado3')">Encender/Apagar</button>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="col-5">
+          <h3>SimpleGrid "col-5"</h3>
+          <p>Estado: <span id="estado4">Apagado</span></p>
+          <button onclick="toggleEstado('estado4')">Encender/Apagar</button>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="col-3">
+          <h3>SimpleGrid "col-4"</h3>
+          <p>Estado: <span id="estado5">Apagado</span></p>
+          <button onclick="toggleEstado('estado5')">Encender/Apagar</button>
+        </article>
+      </section>
+
+      <hr />
+
+      <!-- Section 4 -->
+      <section class="grid">
+        <!-- Card 6 -->
+        <article class="card">
+          <header>
+            <h3>PicoCSS "&lt;Grid&gt;&lt;Card&gt;"</h3>
+          </header>
+          <p>Utiliza: &lt;article&gt;&lt;header&gt;&lt;p&gt;&lt;footer&gt;</p>
+          <p>Estado: <span id="estado6">Apagado</span></p>
+          <footer>
+            <button onclick="toggleEstado('estado6')">Encender/Apagar</button>
+          </footer>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="card">
+          <header>
+            <h3>PicoCSS "&lt;Grid&gt;&lt;Card&gt;"</h3>
+          </header>
+          <p>Utiliza: &lt;article&gt;&lt;header&gt;&lt;p&gt;&lt;footer&gt;</p>
+          <p>Estado: <span id="estado7">Apagado</span></p>
+          <footer>
+            <button onclick="toggleEstado('estado7')">Encender/Apagar</button>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      function toggleEstado(id) {
+        const estado = document.getElementById(id);
+        estado.textContent =
+          estado.textContent === "Apagado" ? "Encendido" : "Apagado";
+      }
+    </script>
+  </body>
+</html>
